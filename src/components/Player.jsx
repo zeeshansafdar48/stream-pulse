@@ -12,12 +12,10 @@ const PlayerComponent = () => {
     const onPlay = () => {
       setPlaying(true);
       playerRef.current.play();
-      console.log("==> ~ onPlay ~ playerRef.current:", playerRef.current);
     };
     const onPause = () => {
       setPlaying(false);
       playerRef.current.pause();
-      console.log("==> ~ onPlay ~ playerRef.current:", playerRef.current);
     };
 
     eventBus.addEventListener(VIDEO_EVENTS.playVideo, onPlay);
